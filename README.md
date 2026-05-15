@@ -18,15 +18,15 @@ A minimalist, high-performance URL shortener built with **Django**. SwiftLink pr
 
 - **Framework**: Django 6.0+
 - **Frontend**: HTML5, CSS3 (Modern Flexbox & Glassmorphism)
-- **Database**: SQLite (Default)
-- **Environment Management**: `uv`
+- **Database**: PostgreSQL
+- **Environment Management**: `pip`
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Python 3.10+
-- `uv` (recommended) or `pip`
+- `pip`
 
 ### Installation & Setup
 
@@ -37,15 +37,15 @@ A minimalist, high-performance URL shortener built with **Django**. SwiftLink pr
    ```
 
 2. **Set up the virtual environment**:
-   Using `uv`:
+   Using `pip`:
    ```bash
-   uv venv
+   python -m venv .venv
    source .venv/bin/activate
    ```
-
+   
 3. **Install dependencies**:
    ```bash
-   uv pip install django
+   pip install -r requirements.txt
    ```
 
 4. **Run Migrations**:
