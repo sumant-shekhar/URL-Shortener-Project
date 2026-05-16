@@ -1,7 +1,16 @@
 
 from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'django-insecure-&h-8g=-iw1x9^x7bo#h+3i^%epo7n1&d#pphk8#k*#mh($=n8z'
+
+
+
+
+
+SECRET_KEY = 'django-insecure-k#+3lvs+ijtn@t)#l^g2o($1wt@0buv(0j4!fv+=6u0(is^y@-'
+
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -10,7 +19,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'urls',
+    'url',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,12 +38,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'shortner.urls'
+ROOT_URLCONF = 'shortener.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR/"templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -46,17 +55,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'shortner.wsgi.application'
-
+WSGI_APPLICATION = 'shortener.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'URL_Shortner',
-        'USER': 'postgres',
-        'PASSWORD': 'Jaiswal123#',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -74,7 +78,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -82,6 +85,5 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 STATIC_URL = 'static/'
